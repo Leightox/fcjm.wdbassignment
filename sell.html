@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopBy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <style>
+        body {
+            background-image: linear-gradient(to bottom right, #135393, #4acfd4);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            font-family: "Lato";
+            color: #e6eef7;
+        }
+    
+        .header {
+            color: #e6eef7;
+            display: flex;
+            justify-content: space-between;
+            padding-right: 40px;
+            padding-left: 40px;
+        }
+    
+        .navigation {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+    
+        .navigation li {
+            margin-left: 40px;
+        }
+    
+        .navigation a {
+            text-decoration: none;
+            color: #e6eef7;
+        }
+
+        .anchor {
+            text-decoration: none;
+            color: #e6eef7;
+        }
+
+        .introduction {
+            color: #e6eef7;
+            text-align: center;
+            font-size: 1.3em;
+            margin: 20px 0px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template: repeat(5, 45px) / 1fr 3fr 3fr;
+            gap: 5px 5px;
+            text-align: right;
+        }
+
+        input {
+            border: 4px double navy;
+            background-color: lightgray;
+            border-radius: 3px;
+            padding: 0.5em 1em;
+            margin: 5px;
+            max-width: 700px;
+        }
+ 
+        .input-button {
+            background-color: navy;
+            color: ivory;
+            transition-duration: 0.5s;
+            border: 3px solid navy;
+            max-width: fit-content;
+            justify-self: center;
+        }
+ 
+        .input-button:hover {
+            background-color: ivory;
+            color: black;
+        }
+
+        .imagePlaceholder{
+            height: 100%;
+            border: 1px solid;
+            border-radius: 5px;
+            background-color: #135393;
+            grid-row: 1 / 5;
+            grid-column: 3;
+            width: 200px;
+            justify-self: center;
+        }
+
+        .submit-button {
+            grid-column: 1 / 4;
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings:
+            'FILL' 0,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 48
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1><a class="anchor" href="home.html">ShopBy</a></h1>
+        <ul class="navigation">
+            <li><a href="sell.html"><h3>Sell</h3></a></li>
+            <li><a href="search.html"><h3>Search</h3></a></li>
+            <li><a href="shopcart.html"><h3><span class="material-symbols-outlined">
+                shopping_cart_checkout
+                </span></h3></a></li>
+        </ul>
+    </div>
+    <hr style="width: 85%;">
+    <div class="introduction">
+        Enter the details of the item you want to sell
+    </div>
+    <form class="grid">
+        <p>Item name:</p><input type="text">
+        <p>Description:</p><input type="text">
+        <p>Quantity:</p><input type="number" min="1">
+        <p>Price per item:</p><input type="number" min="0">
+        <p>Category:</p><input type="text">
+        <div class="imagePlaceholder"></div>
+        <input class="input-button" type="submit" value="Upload an image">
+        <input class="input-button submit-button" type="submit" value="Place sell order">
+    </form>
+</body>
+</html>

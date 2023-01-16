@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopBy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+
+    <style>
+        .body {
+            background-image: linear-gradient(to bottom right, #135393, #4acfd4);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            font-family: "Lato";
+            margin: 0;
+        }
+
+        .header {
+            color: #e6eef7;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 40px;
+        }
+
+        .navigation {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .navigation li {
+            margin-left: 40px;
+        }
+
+        .navigation a {
+            text-decoration: none;
+            color: #e6eef7;
+        }
+
+        .introduction {
+            color: #e6eef7;
+            text-align: center;
+            font-size: 1.3em;
+            padding: 0 15%;
+        }
+
+        .introduction-bigger {
+            color: #e6eef7;
+            text-align: center;
+            font-size: 1.5em;
+            padding: 0 15% 20px 15%;
+            font-weight: bold;
+        }
+
+        form {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        input {
+            border: 5px double navy;
+            background-color: lightgray;
+            border-radius: 3px;
+            padding: 0.5em 1em;
+            flex: 1 1 20%;
+            margin: 1%;
+        }
+
+        .input-button {
+            background-color: navy;
+            color: ivory;
+            transition-duration: 0.5s;
+            border: 2px solid navy;
+            cursor: pointer;
+        }
+
+        .row {
+            display: flex;
+            padding: 0 10%;
+        }
+
+        .intro-box {
+            border: 5px solid navy;
+            border-radius: 25px;
+            flex-grow: 1;
+            padding: 20px;
+            width: 100%;
+            background-color: ivory;
+        }
+
+        .intro-content {
+            color: black;
+            text-align: center;
+            font-size: 1.2em;
+        }
+
+        .button {
+            min-width: 200px;
+            min-height: 50px;
+            border: none;
+            font-size: 1.2em;
+            text-align: center;
+            transition-duration: 0.5s;
+            background-color: navy;
+            color: ivory;
+            border: 2px solid navy;
+            cursor: pointer;
+        }
+
+        .button:hover, .input-button:hover {
+            background-color: cornflowerblue;
+            color: black;
+        }
+
+        .register-div {
+            text-align: center;
+            padding-bottom: 20px;
+        }
+    </style>
+</head>
+<body class="body">
+    <div class="header">
+        <h1>ShopBy</h1>
+        <ul class="navigation">
+            <li><a href="about.html"><h3>About</h3></a></li>
+        </ul>
+    </div>
+    <div>
+        <div class="introduction" style="padding-bottom: 10px; padding-top: 10px;">
+            ShopBy is a leading e-commerce platform for customers and suppliers entrusted by companies worldwide 🌍
+        </div>
+    </div>
+    <div class="introduction" style="font-weight: bold; padding-bottom: 10px">
+        Log In
+    </div>
+    <form>
+        <input type="email" placeholder="Email address">
+        <input type="password" placeholder="Password">
+        <input class="input-button" type="submit" value="Log In" onclick="foobar()">
+        <script>
+            function foobar() {
+                alert("The login service is currently unavailable")
+            }
+        </script>
+        <!--The submit button will work under JavaScript, it would link directly to the Search page, just like the Register page-->
+    </form>
+    <hr style="width: 85%;">
+    <div class="introduction" style="font-weight: bold; padding: 10px 0">
+        Don't have an account yet? Register for free!
+    </div>
+    <div class="introduction-bigger">
+        Explore ways in which you can use ShopBy:
+    </div>
+    <div class="row" style="padding-bottom: 10px;">
+        <div class="intro-box">
+            <div class="intro-content">
+                <div style="font-weight: bolder; padding-bottom: 10px;">
+                    Customer
+                </div>
+                <div style="padding-bottom: 10px;">
+                    Register securely for free and search through thousands of offers using a variety of filters, including customer ratings!
+                </div>
+                <div>
+                    <b>ShopBy</b> takes care of suppliers' credibility and ensures that customers receive exactly what they ordered.
+                </div>
+            </div>
+        </div>
+        <div style="padding: 0 20px"></div>
+        <div class="intro-box">
+            <div class="intro-content">
+                <div style="font-weight: bolder; padding-bottom: 10px;">
+                    Supplier
+                </div>
+                <div style="padding-bottom: 10px;">
+                    Register securely for free and list offers, using numerous filters that will help reaching various customers.
+                    <br>
+                    Explore current trends in commerce through embedded statistics!
+                </div>
+                <div>
+                    <b>ShopBy</b> provides means of contacting the customers, receiving the money directly and sending the product.
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="register-div">
+        <a href="register.html">
+            <button class="button" style="text-align: center; font-family: Lato">
+                Register
+            </button>
+        </a>
+    </div>
+</body>
+</html>

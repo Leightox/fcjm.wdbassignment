@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopBy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <style>
+        body {
+            background-image: linear-gradient(to bottom right, #135393, #4acfd4);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            font-family: "Lato";
+            color: #e6eef7;
+        }
+    
+        .header {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            padding: 0 40px;
+        }
+    
+        .navigation {
+            list-style: none;
+            display: flex;
+            align-items: center;
+        }
+    
+        .navigation li {
+            margin-left: 40px;
+        }
+    
+        .navigation a {
+            text-decoration: none;
+            color: #e6eef7;
+        }
+
+        .anchor {
+            text-decoration: none;
+            color: #e6eef7;
+        }
+
+        .introduction {
+            color: #e6eef7;
+            text-align: center;
+            font-size: 1.3em;
+            padding-bottom: 5px;
+        }
+
+        .searchBar {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        input {
+            border: 5px double navy;
+            background-color: lightgray;
+            border-radius: 3px;
+            padding: 0.5em 1em;
+            flex: 1 1;
+            margin: 5px;
+            max-width: 500px;
+        }
+ 
+        .input-button {
+            background-color: navy;
+            color: ivory;
+            transition-duration: 0.5s;
+            border: 3px solid navy;
+            max-width: fit-content;
+        }
+ 
+        .input-button:hover {
+            background-color: ivory;
+            color: black;
+        }
+
+        .grid {
+            display: grid;
+            grid-template: repeat(4, 1fr) / repeat(7, 1fr);
+            gap: 5px 5px;
+        }
+
+        @media (max-width: 1500px){
+            .grid {
+                grid-template: repeat(4, 1fr) / repeat(6, 1fr);
+            }
+        }
+
+        @media (max-width: 1250px){
+            .grid {
+                grid-template: repeat(5, 1fr) / repeat(5, 1fr);
+            }
+        }
+
+        @media (max-width: 1000px){
+            .grid {
+                grid-template: repeat(5, 1fr) / repeat(4, 1fr);
+            }
+        }
+
+        @media (max-width: 750px){
+            .grid {
+                grid-template: repeat(5, 1fr) / repeat(3, 1fr);
+            }
+        }
+
+        .filters {
+            grid-row: 1 / 20;
+            border: 1px solid;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0px 10px;
+        }
+
+        .filters p {
+            margin: 5px;
+        }
+
+        .filters input {
+            border: 2px solid navy;
+            width: 80%;
+            min-width: 100px;
+        }
+
+        .product{
+            height: 200px;
+            border: 1px;
+            border-radius: 5px;
+            min-width: 150px;
+        }
+
+        .product p {
+            text-align: center;
+            margin: 0px;
+        }
+
+        .imagePlaceholder{
+            margin: 5px;
+            height: 70%;
+            border: 1px solid;
+            border-radius: 5px;
+            background-color: #135393;
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings:
+            'FILL' 0,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 48
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1><a class="anchor" href="home.html">ShopBy</a></h1>
+        <ul class="navigation">
+            <li><a href="sell.html"><h3>Sell</h3></a></li>
+            <li><a href="search.html"><h3>Search</h3></a></li>
+            <li><a href="shopcart.html"><h3><span class="material-symbols-outlined">
+                shopping_cart_checkout
+                </span></h3></a></li>
+        </ul>
+    </div>
+    <div class="introduction">
+        Search for an item
+    </div>
+    <form class="searchBar">
+        <input type="text" placeholder="Enter the item name...">
+        <input class="input-button" type="submit" value="Search">
+    </form>
+    <hr style="width: 85%;">
+    <div class="grid">
+        <form class="filters">
+            <h3>Filters:</h3>
+            <p>Supplier name: <input type="text"></p>
+            <p>Minimum price: <input type="number" min="0"></p>
+            <p>Maximum price: <input type="number" min="0"></p>
+            <p>Minimum rating: <input type="range" min="1" max="100" value="1" class="slider"></p>
+            <p><input class="input-button" type="submit" value="Filter"></p>
+        </form>
+        <div class="product"><div class="imagePlaceholder">Picture</div><p>Product  name</p><p>10.99$</p></div>
+        <div class="product"><div class="imagePlaceholder">Picture</div><p>Product  name</p><p>10.99$</p></div>
+        <div class="product"><div class="imagePlaceholder">Picture</div><p>Product  name</p><p>10.99$</p></div>
+        <div class="product"><div class="imagePlaceholder">Picture</div><p>Product  name</p><p>10.99$</p></div>
+        <div class="product"><div class="imagePlaceholder">Picture</div><p>Product  name</p><p>10.99$</p></div>
+        <div class="product"><div class="imagePlaceholder">Picture</div><p>Product  name</p><p>10.99$</p></div>
+        <div class="product"><div class="imagePlaceholder">Picture</div><p>Product  name</p><p>10.99$</p></div>
+        <div class="product"><div class="imagePlaceholder">Picture</div><p>Product  name</p><p>10.99$</p></div>
+        <div class="product"><div class="imagePlaceholder">Picture</div><p>Product  name</p><p>10.99$</p></div>
+        <div class="product"><div class="imagePlaceholder">Picture</div><p>Product  name</p><p>10.99$</p></div>
+        <div class="product"><div class="imagePlaceholder">Picture</div><p>Product  name</p><p>10.99$</p></div>
+        <div class="product"><div class="imagePlaceholder">Picture</div><p>Product  name</p><p>10.99$</p></div>
+        <div class="product"><div class="imagePlaceholder">Picture</div><p>Product  name</p><p>10.99$</p></div>
+        <div class="product"><div class="imagePlaceholder">Picture</div><p>Product  name</p><p>10.99$</p></div>
+        <div class="product"><div class="imagePlaceholder">Picture</div><p>Product  name</p><p>10.99$</p></div>
+        <div class="product"><div class="imagePlaceholder">Picture</div><p>Product  name</p><p>10.99$</p></div>
+        <div class="product"><div class="imagePlaceholder">Picture</div><p>Product  name</p><p>10.99$</p></div>
+        <div class="product"><div class="imagePlaceholder">Picture</div><p>Product  name</p><p>10.99$</p></div>
+        <div class="product"><div class="imagePlaceholder">Picture</div><p>Product  name</p><p>10.99$</p></div>
+        <div class="product"><div class="imagePlaceholder">Picture</div><p>Product  name</p><p>10.99$</p></div>
+    </div>
+    
+</body>
+</html>
